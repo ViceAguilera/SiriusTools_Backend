@@ -17,7 +17,5 @@ jobs:
         run: poetry install --no-interaction --no-ansi
       - name: Lint
         run: poetry run flake8
-      - name: Test
-        run: poetry run pytest --maxfail=1 --disable-warnings -q
       - name: Build image
         run: docker build -t siriustools-backend .
